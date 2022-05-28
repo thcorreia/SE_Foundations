@@ -1,0 +1,111 @@
+<!--
+Othello project
+-->
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Othello</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sign_up.css') }}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link href='https://fonts.googleapis.com/css?family=GFS Neohellenic' rel='stylesheet'>
+  </head>
+
+    <body>
+      
+          <!-- /Navigation Bar -->
+          <nav class= "container1">
+              <div class="container_logo_navbar"> 
+                  <a class="navbar-brand"> <img class="logo" src="static/image/logo.png" /></a>
+              </div>
+          </nav>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages%}
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+            <div class="alert-danger" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% else %}
+            <div class="alert-success" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endif %} {% endfor %} {% endif %} {% endwith %}
+            
+          
+        <!-- /form -->
+           
+          <div class="container2">
+              {% block content %}
+              <form method="POST">
+              <h4>SIGN UP</h4>
+                  <div class="form-container">
+
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                        type="email" 
+                        class="form-control" 
+                        id="email" 
+                        name="email"
+                        aria-describedby="emailHelp" 
+                        placeholder="Enter email"
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="userName">User name</label>
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        id="userName" 
+                        name="userName"
+                        aria-describedby="emailHelp" 
+                        placeholder="Enter user name">
+                      </div>
+                      
+
+                      <div class="form-group">
+                        <label for="password1">Password</label>
+                        <input 
+                        type="password" 
+                        class="form-control" 
+                        id="password1" 
+                        name="password1" 
+                        placeholder="Enter password">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password2">Check password</label>
+                        <input 
+                        type="password" 
+                        name
+                        class="form-control" 
+                        id="password2" 
+                        name="password2"
+                        placeholder="Confirm password">
+                      </div>
+
+                      <button type="submit" class="button_primary_solid">Register</button>
+                  </div>
+              </form>
+              {% endblock %}
+          </div>
+          
+
+            <!-- /Image -->
+          <div class="container3">
+              <img src="static/image/image1.png"/>
+          </div>
+      
+    </body>
+</html>

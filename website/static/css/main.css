@@ -1,0 +1,229 @@
+.body {
+  margin: 0px; 
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #0D2680;
+  height: 104px;
+  padding: 0px;
+  margin: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  margin-left:5%;
+  margin-bottom: center;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+.nav_button {
+  display:flex;
+  margin-right: 5%;
+  justify-content: end;
+}
+
+.nav_each_button{
+  margin-left:30px;
+}
+
+.button_primary_solid {
+  border: none;
+  padding:8px;
+  background-color:#FAC710;
+  border-color: #FAC710;
+  color:#0D2680;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19.2px;
+  border-radius: 4px;
+}
+
+.button_primary_outline {
+  padding:8px;
+  background-color:#FFFFFF;
+  color:#0D2680;
+  border-color: #FAC710;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19.2px;
+  border-radius: 4px;
+}
+
+
+/* Header */
+
+.header_title {
+  font-family: "GFS Neohellenic";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 53.75px;
+}
+
+.header_subtitle {
+  font-family: "GFS Neohellenic";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 37.32px;
+}
+
+header img {
+  height: 244px;
+  width: 100%;
+}
+
+.header_container{
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  left: 0; top: 0; right:0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Section */
+
+.cards-group {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 8%;
+  margin-top:8%;
+}
+
+main a{
+  margin:2em;
+}
+
+main a img {
+  width:100%;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #195880;
+  height: 104px;
+  width: auto;
+  padding: 0px; 
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+footer, ul, li, p, a {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  color: F2F5FF;
+  font-family: "GFS Neohellenic";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+footer img {
+  size:24px;
+}
+
+.footer_menu {
+  display:flex;
+  margin-right: 76px;
+  padding:0px;
+  border:0px;
+  margin-top:26px;
+  margin-bottom:26px;
+}
+
+.icone_footer {
+  margin-left: 44px;
+  text-align-last: center;
+}
+
+/*  Responsive */
+
+/*  If tablet size: */
+
+@media only screen and (max-width: 744px) {
+
+  .header_title {
+    font-size: 37.32px;
+  }
+  
+  .header_subtitle {
+    font-size: 25.92px;
+  }
+  
+  .cards-group {
+    flex-direction:column;
+    align-items: center;
+  }
+
+  main a img {
+    width:100%;
+    margin:10%;
+  }
+
+  .footer {
+  justify-content: center;
+  width: fit-content;
+  }
+
+}
+
+/*  If mobile size: */
+@media only screen and (max-width: 428px)   {
+  
+  .button_primary_solid {
+    font-size: 13.3px;
+  }
+  
+  .button_primary_outline {
+    border: 1px solid black;
+    font-size: 13.3px;
+    
+  }
+
+  .header_title {
+    font-size: 37.32px;
+  }
+  
+  .header_subtitle {
+    font-size: 25.92px;
+  }
+  
+  .cards-group {
+    flex-direction:column;
+    align-items: center;
+  }
+
+  main a img {
+    width:50%;
+    margin:10%;
+  }
+
+  .footer {
+  justify-content: center;
+  width: fit-content;
+  }
+
+  footer, ul, li, p, a {
+    font-size: 12.5px;
+  }
+
+
+}
